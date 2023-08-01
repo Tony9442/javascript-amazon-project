@@ -1,4 +1,4 @@
-//THIS IS ACLLED SAVING DATA
+//THIS IS CALLED SAVING DATA
 
 //THE LIST OF PRODUCTS WE WIRTING IS CALLED DATA STRUCTURE
 
@@ -7,61 +7,61 @@
 // SO WE CREAT AN ARRAY CAUSE IT REPRESENTS A LIST
 
 // AND USE OBJECT TO REPRESENT EACH PRODUCT LIKE Image, name, and a price BECAUSE OBJETC LETS US GROUP MULTIPLE VALUES TOGETHER
+
+
 const product = [{
-   image : "images/products/athletic-cotton-socks-6-pairs.jpg",
-   name : 'Black and Gray Athletic Cotton Socks - 6 Pairs',
-   rating : {
-    stars : 4.5,
-    count : 87
+
+   image: 'images/products/athletic-cotton-socks-6-pairs.jpg',
+   name: 'Black and Gray Athletic Cotton Socks - 6 Pairs',
+   rating: {
+    stars: 4.5,
+    count: 87
    },
-   priceCent : 1090
+   priceCent: 1090
 
 }, {
-  image :
-  "images/products/intermediate-composite-basketball.jpg",
-  name :"Intermediate Size Basketball",
-  rating : {
-    stars : 4,
-    count : 127
+  image:
+  'images/products/intermediate-composite-basketball.jpg',
+  name: 'Intermediate Size Basketball',
+  rating: {
+    stars: 4,
+    count: 127
   },
-  priceCent : 2095
-},{
+  priceCent: 2095
+}, {
   image : 'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
   name : 'Adults Plain Cotton T-Shirt - 2 Pack',
-  rating : {
-    stars : 4.5,
-    count : 56
+  rating: {
+    stars: 4.5,
+    count: 56
   },
-  priceCent : 799
-},{
-
+  priceCent: 799
 }];
 
-let productHTML = '';
+let productHTML ='';
 
-
-product.forEach((product) => {
+product.forEach((products) => {
   productHTML += `
-      <div class="product-container">
+    <div class="product-container">
       <div class="product-image-container">
         <img class="product-image"
-          src="${product.image}">
+          src="${products.image}">
       </div>
 
       <div class="product-name limit-text-to-2-lines">
-        ${product.name}
+        ${products.name}
       </div>
 
       <div class="product-rating-container">
         <img class="product-rating-stars"
-          src="images/ratings/rating-${product.rating.stars * 10}.png">
+          src="images/ratings/rating-${products.rating.stars * 10}.png">
         <div class="product-rating-count link-primary">
-          ${product.rating.count}
+          ${products.rating.count}
         </div>
       </div>
 
       <div class="product-price">
-        ${product.priceCent / 100}
+        $${(products.priceCent / 100).toFixed(2)}
       </div>
 
       <div class="product-quantity-container">
@@ -90,11 +90,9 @@ product.forEach((product) => {
         Add to Cart
       </button>
     </div>
-  `;
+      `;
 
-
+  
 });
 
-console.log(productHTML);
-
-document.querySelector('.js-products-grid').innerHTML= productHTML;
+ document.querySelector('.js-products-grid').innerHTML =  productHTML;
