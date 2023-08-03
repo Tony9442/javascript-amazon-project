@@ -1,3 +1,5 @@
+import {product} from "../data/products.js";
+
 //The dot dot here means to get out of a folder here is the script folder
 import {cart} from "../data/cart.js";
 
