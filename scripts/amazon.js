@@ -1,3 +1,8 @@
+//The dot dot here means to get out of a folder here is the script folder
+import {cart} from "../data/cart.js";
+
+
+
 //THIS IS CALLED SAVING DATA
 
 //THE LIST OF PRODUCTS WE WIRTING IS CALLED DATA STRUCTURE
