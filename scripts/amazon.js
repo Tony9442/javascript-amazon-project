@@ -1,3 +1,4 @@
+import { formatCurrency } from "./utils/money.js";
 import {product} from "../data/products.js";
 
 //The dot dot here means to get out of a folder here is the script folder
@@ -40,7 +41,7 @@ product.forEach((products) => {
       </div>
 
       <div class="product-price">
-        $${(products.priceCent / 100).toFixed(2)}
+        $${formatCurrency(products.priceCents)}
       </div>
 
       <div class="product-quantity-container">
