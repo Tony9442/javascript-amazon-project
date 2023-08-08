@@ -67,7 +67,8 @@ product.forEach((products) => {
       </div>
 
        
-      <button class="add-to-cart-button button-primary js-add-to-cart" data-product-id="${products.id}">
+      <button class="add-to-cart-button button-primary js-add-to-cart"
+      data-product-id="${products.id}">
         Add to Cart
       </button>
     </div>
@@ -83,10 +84,12 @@ product.forEach((products) => {
 
        let cartQuantity = 0;
 
+       //LINE 88-89 CALCULATES THE QUANTITY
        cart.forEach((cartItem) => {
          cartQuantity += cartItem.quantity;
        });
 
+       //LINE 93 UPDATES IT TO OUR PAGE
        document.querySelector(".js-cart-quantity").innerHTML = cartQuantity;
     }
 
@@ -100,3 +103,4 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
   });
 });
 
+ 

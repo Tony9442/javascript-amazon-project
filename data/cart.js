@@ -41,6 +41,8 @@ if (!cart) {
       saveToStorage();
     };
 
+    //END OF CODE
+
     export const removeFromCart = (productId) => {
        const newCart = [];
 
